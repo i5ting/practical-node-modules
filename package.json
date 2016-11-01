@@ -1,0 +1,20 @@
+{
+  "name": "practical-node-modules",
+  "version": "1.0.0",
+  "description": "- [node模块开发入门](gettingstart.md) - 二进制模块 - 开发 - 测试 - [辅助](assistant.md) - npm技巧 - 我写的模块 - 其他",
+  "main": "a.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/i5ting/practical-node-modules.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/i5ting/practical-node-modules/issues"
+  },
+  "homepage": "https://github.com/i5ting/practical-node-modules#readme"
+}
