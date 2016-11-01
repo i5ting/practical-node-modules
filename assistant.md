@@ -187,18 +187,7 @@ Gulp 严格的插件指南确保插件如你期望的那样简洁高质得工作
 
 ![Gulp](img/gulp.png)
 
-
 说的还是相当清晰的，喜欢的自己学
-
-另外仓库在此
-https://github.com/osscafe/gulp-cheatsheet
-
-
-另外一篇是
-
-http://i5ting.github.io/stuq-gulp/
-
-即stuq-gulp.md
 
 说是入门指南，还是得从npm开始科普
 
@@ -400,26 +389,6 @@ https://github.com/dope/gulp-starter/blob/master/gulpfile.js
 - https://github.com/weui/weui
 - https://github.com/zont/gulp-usemin
 
-### 实用的watch
-
-```
-gulp.task('watch', function () {
-    gulp.watch('src/**/*.less', ['styles']);
-    gulp.watch('src/example/**/*.{html,js}', ['source'], function () {
-        browserSync.reload();
-    });
-});
-```
-
-watch其实就干了2件事儿
-
-- 1）如果'src/*/.less'变动，执行styles task
-- 2）如果'src/example/*/.{html,js}'变动，先执行'source' task，然后livereload通知浏览器
-
-大家伙只要了解文件变动能干坏事即可，其他可自由发挥
-
-如果gulp内置的watch无法满足，你还可以使用gulp-watch这个单独模块，哈哈，如果有兴趣还可以研究一下操作系统底层监控文件变动接口，有点意思
-
 ### 使用browserSync做livereload
 
 server task一看就知道是启动服务器，一般前端开发，都是起一个服务器在浏览器里测试
@@ -477,6 +446,36 @@ http://people.apache.org/~pmuellr/weinre-docs/latest/
 - 3) 自动打开网页
 
 还不错吧，下面看一下更实用的一个task： watch监控
+
+### 实用的watch
+
+```
+gulp.task('watch', function () {
+    gulp.watch('src/**/*.less', ['styles']);
+    gulp.watch('src/example/**/*.{html,js}', ['source'], function () {
+        browserSync.reload();
+    });
+});
+```
+
+watch其实就干了2件事儿
+
+- 1）如果'src/*/.less'变动，执行styles task
+- 2）如果'src/example/*/.{html,js}'变动，先执行'source' task，然后livereload通知浏览器
+
+大家伙只要了解文件变动能干坏事即可，其他可自由发挥
+
+如果gulp内置的watch无法满足，你还可以使用gulp-watch这个单独模块，哈哈，如果有兴趣还可以研究一下操作系统底层监控文件变动接口，有点意思
+
+### 更多
+
+gulp-cheatsheet
+
+https://github.com/osscafe/gulp-cheatsheet
+
+另外一篇是stuq-gulp/
+
+http://i5ting.github.io/stuq-gulp/
 
 ## ghooks
 
