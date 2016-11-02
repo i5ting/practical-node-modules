@@ -174,3 +174,30 @@ if (exec('git commit -am "Auto-commit"').code !== 0) {
 ```
 
 其实大部分shell都支持，还是非常用的模块
+
+
+
+## tore
+
+对于我这种经常使用命令的人，有的时候去github上去看看，这是最好是一个命令，就直接跳过去
+
+tore = to repository: open with github url https://github.com/i5ting/tore
+
+源码很简单，只有几行
+
+```
+ #!/usr/bin/env node
+
+var open = require("open");
+var cfg = require('get-git-info')(process.cwd());
+
+console.log(cfg)
+
+open("https://github.com/" + cfg.user + "/" + cfg.project + "");
+```
+
+- get-git-info可以获取当前目录git的user和project
+- open使用默认浏览器打开某个地址
+
+剩下的就是字符串拼接工作了，简单实用吧
+
