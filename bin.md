@@ -138,6 +138,12 @@ if(!isWin) {
 
 The /T (terminates all the sub processes) and /F (forcefully terminating) arguments are also critical and without them we can't achieve the desired results.
 
+## A better `child_process`
+
+https://github.com/sindresorhus/execa
+
+
+
 ## 使用shelljs
 
 https://github.com/shelljs/shelljs
